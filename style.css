@@ -1,0 +1,360 @@
+/*
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Rubik Moonrocks', cursive;
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    font-family: 'Space Mono', monospace;
+
+    font-family: 'Titan One', cursive;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+*/
+
+/* * * * * * * * * * * * * * * * * * * * * * *
+ * Allgemein
+ * * * * * * * * * * * * * * * * * * * * * * */
+
+ html
+ {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ body
+ {
+     max-width: 1000px;
+     margin: 0 auto;
+     font-family: Open Sans;
+     font-size: 16px;
+     line-height: 22px;
+ }
+ 
+main
+{
+    margin-top: 80px;
+    padding-bottom: 100px;
+    font-family: Open Sans;
+}
+
+ /* * * * * * * * * * * * * * * * * * * * * * *
+  * Rene
+  * * * * * * * * * * * * * * * * * * * * * * */
+ 
+ .nav-container {
+   height: 60px;
+   background-color: #3a778e;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   overflow: hidden;
+   position: fixed; /* Element an der angegegeben Position dauerhaft festigen */
+   width: 80%; /* Breite des Elements 80% der Sichtfeld anpassen */
+   left: 10%; /* Das Element von links aus 10% reinrücken */
+   top: 0px; /* Element an der Position 0 auf der vertikalen Ebene festlegen */
+
+ }
+ 
+ .nav-container .logo {
+   max-width: 250px;
+   padding: 0 10px;
+   overflow: hidden;
+ }
+ 
+ .nav-container .logo a {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   height: 60px;
+ }
+ 
+ .nav-container .logo a img {
+   max-width: 100%;
+   max-height: 60px;
+ }
+ 
+ .nav-container .navbar {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-box-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+   padding: 0 10px;
+ }
+ 
+ .nav-container .navbar ul {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .nav-container .navbar ul li a {
+   text-decoration: none;
+   color: #cccccc;
+   font-weight: 600;
+   font-size: 18px;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+   display: block;
+   height: 60px;
+   line-height: 60px;
+   cursor: pointer;
+   padding: 0 10px;
+ }
+ 
+ .nav-container .navbar ul li a:hover {
+   color: #ffffff;
+   background-color: rgba(23, 23, 23, 0.9);
+ }
+ 
+ .nav-container .navbar ul .close {
+   display: none;
+   text-align: right;
+   padding: 10px;
+ }
+ 
+ .nav-container .navbar ul .close span {
+   font-size: 40px;
+   display: inline-block;
+   border: 1px solid #cccccc;
+   padding: 0 10px;
+   cursor: pointer;
+ }
+ 
+ .nav-container .navbar .icon-bar {
+   padding: 18px 8px;
+   width: 50px;
+   height: 60px;
+   display: none;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   cursor: pointer;
+ }
+ 
+ .nav-container .navbar .icon-bar i {
+   background-color: #ffffff;
+   height: 2px;
+ }
+ 
+ @media only screen and (max-width: 650px) {
+   .nav-container {
+     -webkit-box-pack: justify;
+     -ms-flex-pack: justify;
+     justify-content: space-between;
+   }
+ 
+   .nav-container .logo {
+     -webkit-box-flex: 1;
+     -ms-flex: 1;
+     flex: 1;
+   }
+ 
+   .nav-container .navbar {
+     -webkit-box-flex: 0;
+     -ms-flex: 0;
+     flex: 0;
+   }
+ 
+   .nav-container .navbar ul {
+     -ms-flex-wrap: nowrap;
+     flex-wrap: nowrap;
+     position: fixed;
+     left: 100%;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     background: #ffffff;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     -webkit-transition: left 0.3s;
+     -o-transition: left 0.3s;
+     transition: left 0.3s;
+   }
+ 
+   .nav-container .navbar ul li a {
+     padding: 10px;
+     font-size: 18px;
+     height: auto;
+     line-height: normal;
+     color: #333333;
+   }
+ 
+   .nav-container .navbar ul .close {
+     display: block;
+   }
+ 
+   .nav-container .navbar .icon-bar {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+   }
+ 
+   .nav-container .navbar ._Menus-show {
+     left: 0;
+   }
+ }
+ 
+ /* * * * * * * * * * * * * * * * * * * * * * *
+  * Karim
+  * * * * * * * * * * * * * * * * * * * * * * */
+
+  footer{
+    border: 1px solid rgb(160,170,180);
+    border-bottom: none;
+    padding: 6px;
+     background-color: #fff;
+     display: flex;
+     justify-content: center;
+     justify-items: center;
+     /*padding-top: 700px;*/
+     position: fixed; /* Element an der angegegeben Position dauerhaft festigen */
+     bottom: 0; /* Element wird am unteren Rand festgesetzt */
+     width: 80%; /* Breite des Elements 80% der Sichtfeld anpassen */
+     left: 10%; /* Das Element von links aus 10% reinrücken */
+ }
+ 
+ .footer-span a{
+     color: rgba(8, 0, 0, 0.829);
+     font-size: 15px;
+     text-decoration: none;
+     align-content: space-between;
+ 
+ }
+ 
+ #search{
+     margin-top:12px;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ 
+ .search{
+     
+     color:rgba(0, 0, 0, 0.517);
+     font-size: 15px; 
+ }
+ 
+ .footer-container .footer-span a:hover{
+ 
+     color: rgb(232, 26, 26);
+ }
+ 
+footer input[type="text"]
+{
+    outline: none;
+    margin-left: 10px;
+    border: 1px solid rgb(170,180,190);
+    border-radius: 6px;
+    box-shadow: inset 4px 4px 4px rgba(0,0,0,0.1);
+}
+
+ /* * * * * * * * * * * * * * * * * * * * * * *
+  * Abdülaziz
+  * * * * * * * * * * * * * * * * * * * * * * */
+ 
+  .resitem
+  {
+      width: 100%;
+      outline: none;
+      margin: 0 auto;
+      margin-bottom: 20px;
+  }
+  .resitem div
+  {
+      padding: 0px;
+  }
+  .resitem a
+  {
+      text-decoration: none;
+      color: #000;
+  }
+  .resitem .layout_1
+  {
+      display: flex;
+      width: 100%;
+    	font-family: Open Sans;
+  }
+  .resitem .layout_1 div
+  {
+      background-color: rgb(230,230,240);
+      border-bottom: none;
+      padding: 10px;
+  }
+  .resitem .layout_1 div:nth-child(1)
+  {
+      border-right: none;
+  }
+  .resitem .layout_1 div:nth-child(2)
+  {
+      border-left: none;
+  }
+  .resitem .layout_2
+  {
+      padding: 20px;
+      background-color: rgb(230,230,240);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      border-top-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      max-height: 200px;
+      overflow: auto;
+      font-family: Open Sans;
+  }
+  .resitem .layout_3
+  {
+      padding: 20px;
+      line-height: 26px;
+      background-color: rgb(230,230,240);
+      box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+      border-top-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      text-align: justify;
+      max-height: 200px;
+      overflow: auto;
+      font-family: Open Sans;
+  }
+  .resitem .crdate
+  {
+      padding-right: 10px;
+      font-size: 10px;
+      border-top-right-radius: 6px;
+  }
+  .resitem .author
+  {
+      padding-left: 10px;
+      border-top-left-radius: 6px;
+  }
+  .resitem .headline
+  {   font-size: 20px;
+    line-height: 30px;
+      text-align: center;
+  }

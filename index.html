@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100&family=Rubik+Moonrocks&family=Source+Sans+Pro:wght@200&family=Space+Mono&family=Titan+One&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Hacking-News</title>
+</head>
+<body>
+    <div id="container">
+
+        <!-- Rene -->
+<div class="nav-container">
+      <div class="logo">
+        <a href="#"><img src="logo.png" alt="logo" width="60" height="60" /></a>
+      </div>
+      <nav>
+        <div class="navbar">
+          <div class="icon-bar" onclick="Show()">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+
+          <ul id="nav-lists">
+            <li class="close"><span onclick="Hide()">×</span></li>
+            <li id = "new"><a href="#" onclick="menu_new()">New</a></li>
+            <li id = "past"><a href="#" onclick="menu_past()">Past</a></li>
+            <li id = "comment"><a href="#" onclick="menu_comment()">Comment</a></li>
+            <li id = "ask"><a href="#" onclick="menu_ask()">Ask</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+        <!-- Inhalt -->
+        <main>
+
+        </main>
+
+        <!-- Karim -->
+        <footer>
+            <div class="footer-container">
+                <span class="footer-span">
+                    <a href="">Guidelines</a>
+                    |
+                    <a href="#">FAQ</a>
+                    |
+                    <a href="#">Lists</a>
+                    |
+                    <a href="#">API</a>
+                    |
+                    <a href="#">Secuirty</a>
+                    |
+                    <a href="#">Legal</a>
+                    |
+                    <a href="#">Apply to YC</a>
+                    |
+                    <a href="#">Contact</a>
+                    |
+                </span>
+                
+                <br>
+                
+                <div id="search">
+                    <label class="search">Search:</label>
+                    <input type="text" class="search2" placeholder = "Filter result...">
+                </div>
+
+            </div>
+        </footer>
+      </div>
+</body>
+</html>
+
+<script>
+
+    /* Rene */
+
+    let navList = document.getElementById("nav-lists");
+    function Show() {
+    navList.classList.add("_Menus-show");
+    }
+    function Hide() {
+    navList.classList.remove("_Menus-show");
+    }
+
+    /* Karim */
+
+    const search = document.getElementsByClassName("search2")[0];
+
+    search.addEventListener("change", filterResult);
+
+    /* NEW wird für das erste Laden der Seite automatisch mitgeladen */
+
+    menu_new();
+
+</script>
